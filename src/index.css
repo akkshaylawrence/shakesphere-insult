@@ -227,14 +227,13 @@ input:focus {
     color: #ffffff;
 }
 
-body.dark .intensity-button.active {
-    color: #18181b;
+body.dark .intensity-button:not(.active) {
+    color: var(--primary-hover);
 }
 
-body.dark .intensity-button[data-level="mild"].active,
-body.dark .intensity-button[data-level="spicy"].active,
-body.dark .intensity-button[data-level="lethal"].active {
-    color: #ffffff;
+body.dark .intensity-button.active {
+    color: #18181b;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
 }
 
 .result-card {
