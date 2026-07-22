@@ -45,12 +45,13 @@ export function App() {
 
     const pickRandom = (words) => words[Math.floor(Math.random() * words.length)];
 
-    const generateInsult = useCallback(() => {
+    const generateInsult = useCallback((levelOverride) => {
+        const level = levelOverride ?? intensity;
         const columns = [col1Words, col2Words, col3Words];
         setCurrentWords(prevWords => {
             return prevWords.map((word, index) => {
                 if (lockedSlots[index] && word) return word;
-                const pool = getPool(columns[index], intensity);
+                const pool = getPool(columns[index], level);
                 return pickRandom(pool);
             });
         });
@@ -63,6 +64,7 @@ export function App() {
 
     const handleIntensityChange = (newIntensity) => {
         setIntensity(newIntensity);
+        generateInsult(newIntensity);
     };
 
     const handleToggleLock = (index) => {
