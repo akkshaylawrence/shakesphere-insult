@@ -178,7 +178,7 @@ export const lethalWords = new Set([
 
 export const intensityConfig = {
     mild: {
-        intro: target => target ? 'Thou ' + target + ', thou' : 'Thou',
+        intro: target => target ? 'Thou, ' + target + '—thou' : 'Thou',
         closing: 'Prithee, trouble us no more.'
     },
     spicy: {
@@ -186,7 +186,7 @@ export const intensityConfig = {
         closing: 'Begone, before thy folly becomes contagious.'
     },
     lethal: {
-        intro: target => target ? 'Out, ' + target + '! Thou most accursed' : 'Out! Thou most accursed',
+        intro: target => target ? 'Out, ' + target + '! Thou most accursed!' : 'Out! Thou most accursed!',
         closing: 'Even Hell itself would spit thee back.'
     }
 };
