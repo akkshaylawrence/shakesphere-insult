@@ -45,6 +45,7 @@ body.dark {
 
 body {
     min-height: 100vh;
+    min-height: 100dvh;
     margin: 0;
     background: radial-gradient(circle at 15% 0%, var(--accent-wash), transparent 32rem), var(--background);
     color: var(--text);
@@ -64,7 +65,10 @@ button {
 .page-shell {
     width: min(100% - 40px, 760px);
     margin: 0 auto;
-    padding: clamp(40px, 6vw, 72px) 0;
+    padding-top: max(clamp(40px, 6vw, 72px), env(safe-area-inset-top));
+    padding-bottom: max(clamp(40px, 6vw, 72px), env(safe-area-inset-bottom));
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
 }
 
 .page-header {

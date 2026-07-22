@@ -28,6 +28,21 @@ function msUntilNextTransition() {
     return Math.max(next.getTime() - now.getTime(), 0);
 }
 
+const THEME_COLORS = {
+    light: '#f7f7f5',
+    dark: '#111113',
+};
+
+function syncThemeColor(theme) {
+    let meta = document.querySelector('meta[name="theme-color"]:not([media])');
+    if (!meta) {
+        meta = document.createElement('meta');
+        meta.name = 'theme-color';
+        document.head.appendChild(meta);
+    }
+    meta.content = THEME_COLORS[theme];
+}
+
 export function useTheme() {
     const [theme, setTheme] = useState(() => resolveTheme());
 
@@ -37,6 +52,7 @@ export function useTheme() {
         } else {
             document.body.classList.remove('dark');
         }
+        syncThemeColor(theme);
     }, [theme]);
 
     useEffect(() => {
