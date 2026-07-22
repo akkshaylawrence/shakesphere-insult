@@ -6,7 +6,7 @@ export function InsultCard({ target, intensity, currentWords, lockedSlots, onTog
     const closingText = '— ' + config.closing;
 
     return (
-        <article className="result-card" aria-live="polite" aria-atomic="true">
+        <article id="insult-card" className="result-card" aria-live="polite" aria-atomic="true">
             <div className="result-heading">
                 <p className="result-label">Your insult</p>
                 <p className="lock-hint">Select a word to lock it</p>

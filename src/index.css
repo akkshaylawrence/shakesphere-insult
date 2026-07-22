@@ -242,6 +242,29 @@ body.dark .intensity-button[data-level="lethal"].active {
     box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.03);
 }
 
+.result-card--export .lock-hint {
+    display: none;
+}
+
+.result-card--export .insult-words {
+    gap: 2px 4px;
+}
+
+.result-card--export .word-button,
+.result-card--export .word-button[aria-pressed="true"] {
+    padding: 2px 4px;
+    margin: 0;
+    border-bottom: 0;
+    background: transparent;
+    color: inherit;
+    font-weight: inherit;
+    cursor: default;
+}
+
+.result-card--export .word-button[data-slot="1"]::after {
+    content: ",";
+}
+
 .result-heading {
     display: flex;
     align-items: center;

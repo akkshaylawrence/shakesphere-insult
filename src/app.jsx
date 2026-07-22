@@ -11,7 +11,7 @@ import { exportInsultImage } from './utils/canvasExport';
 import { col1Words, col2Words, col3Words, mildWords, lethalWords, intensityConfig } from './data/words';
 
 export function App() {
-    const { isDark } = useTheme();
+    useTheme();
     const [target, setTarget] = useState('');
     const [intensity, setIntensity] = useState('mild');
     const [currentWords, setCurrentWords] = useState([null, null, null]);
@@ -96,10 +96,14 @@ export function App() {
         addFavorite(text);
     };
 
-    const handleDownload = () => {
-        const insultText = buildInsultText();
-        exportInsultImage(insultText, isDark);
-        showStatus('Image downloaded.');
+    const handleDownload = async () => {
+        try {
+            const cardEl = document.getElementById('insult-card');
+            await exportInsultImage(cardEl);
+            showStatus('Image downloaded.');
+        } catch {
+            showStatus('Could not download image.');
+        }
     };
 
     return (
