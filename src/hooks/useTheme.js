@@ -4,6 +4,14 @@ function isNightTime() {
     return new Date().getHours() >= 18;
 }
 
+function prefersDark() {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+}
+
+function resolveTheme() {
+    return isNightTime() || prefersDark() ? 'dark' : 'light';
+}
+
 function msUntilNextTransition() {
     const now = new Date();
     const next = new Date(now);
@@ -21,7 +29,7 @@ function msUntilNextTransition() {
 }
 
 export function useTheme() {
-    const [theme, setTheme] = useState(() => (isNightTime() ? 'dark' : 'light'));
+    const [theme, setTheme] = useState(() => resolveTheme());
 
     useEffect(() => {
         if (theme === 'dark') {
@@ -33,18 +41,25 @@ export function useTheme() {
 
     useEffect(() => {
         let timeoutId;
+        const media = window.matchMedia('(prefers-color-scheme: dark)');
 
         const schedule = () => {
             timeoutId = setTimeout(() => {
-                setTheme(isNightTime() ? 'dark' : 'light');
+                setTheme(resolveTheme());
                 schedule();
             }, msUntilNextTransition());
         };
 
-        setTheme(isNightTime() ? 'dark' : 'light');
-        schedule();
+        const onSchemeChange = () => setTheme(resolveTheme());
 
-        return () => clearTimeout(timeoutId);
+        setTheme(resolveTheme());
+        schedule();
+        media.addEventListener('change', onSchemeChange);
+
+        return () => {
+            clearTimeout(timeoutId);
+            media.removeEventListener('change', onSchemeChange);
+        };
     }, []);
 
     return { theme, isDark: theme === 'dark' };
