@@ -305,11 +305,9 @@ body.dark .intensity-button[data-level="lethal"].active {
 }
 
 .word-button {
-    padding: 2px 8px;
-    margin: 0 -2px;
+    padding: 2px 5px;
     border: 0;
     border-bottom: 2px dashed var(--muted);
-    border-radius: 6px;
     background: transparent;
     cursor: pointer;
     font-family: inherit;
