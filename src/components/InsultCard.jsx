@@ -35,6 +35,7 @@ export function InsultCard({ target, intensity, currentWords, lockedSlots, onTog
                         key={index}
                         className="definition-chip"
                         type="button"
+                        data-level={intensity}
                         onClick={() => onSelectWordDef(wordObj)}
                     >
                         <strong>{wordObj.word}</strong>: {wordObj.def}

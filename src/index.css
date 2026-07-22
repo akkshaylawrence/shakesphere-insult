@@ -350,9 +350,8 @@ body.dark .intensity-button[data-level="lethal"].active {
 }
 
 .definition-chip {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
+    display: inline-block;
+    max-width: 100%;
     padding: 6px 12px;
     border: 1px solid var(--border);
     border-radius: 999px;
@@ -361,17 +360,33 @@ body.dark .intensity-button[data-level="lethal"].active {
     cursor: pointer;
     font-size: 0.78rem;
     font-weight: 500;
+    text-align: left;
+    white-space: normal;
+    overflow-wrap: normal;
+    word-break: normal;
     transition: border-color 150ms, background 150ms, color 150ms, transform 100ms;
 }
 
 .definition-chip strong {
+    white-space: nowrap;
     font-weight: 700;
+}
+
+.definition-chip[data-level="mild"] strong {
+    color: var(--mild);
+}
+
+.definition-chip[data-level="spicy"] strong {
+    color: var(--savage);
+}
+
+.definition-chip[data-level="lethal"] strong {
+    color: var(--lethal);
 }
 
 .definition-chip:hover {
     border-color: var(--accent);
     background: var(--accent-soft);
-    color: var(--accent);
 }
 
 .actions {
