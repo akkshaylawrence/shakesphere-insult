@@ -125,6 +125,7 @@ export function App() {
                     intensity={intensity}
                     currentWords={currentWords}
                     lockedSlots={lockedSlots}
+                    statusMessage={statusMessage}
                     onToggleLock={handleToggleLock}
                     onSelectWordDef={setSelectedWordDef}
                 />
@@ -146,10 +147,6 @@ export function App() {
                         onClose={() => setShowFavorites(false)}
                     />
                 )}
-
-                <p id="status-message" className="status-message" role="status">
-                    {statusMessage}
-                </p>
             </section>
 
             <DefinitionModal

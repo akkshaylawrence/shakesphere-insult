@@ -17,7 +17,10 @@ export async function exportInsultImage(cardEl) {
             pixelRatio: 2,
             cacheBust: true,
             backgroundColor,
-            filter: (node) => !(node instanceof HTMLElement && node.classList.contains('lock-hint')),
+            filter: (node) => !(node instanceof HTMLElement && (
+                node.classList.contains('lock-hint') ||
+                node.classList.contains('status-message')
+            )),
         });
 
         const link = document.createElement('a');

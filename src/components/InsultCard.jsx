@@ -1,6 +1,6 @@
 import { intensityConfig } from '../data/words';
 
-export function InsultCard({ target, intensity, currentWords, lockedSlots, onToggleLock, onSelectWordDef }) {
+export function InsultCard({ target, intensity, currentWords, lockedSlots, statusMessage, onToggleLock, onSelectWordDef }) {
     const config = intensityConfig[intensity];
     const introText = config.intro(target.trim()) + '…';
     const closingText = '— ' + config.closing;
@@ -9,7 +9,13 @@ export function InsultCard({ target, intensity, currentWords, lockedSlots, onTog
         <article id="insult-card" className="result-card" aria-live="polite" aria-atomic="true">
             <div className="result-heading">
                 <p className="result-label">Your insult</p>
-                <p className="lock-hint">Select a word to lock it</p>
+                {statusMessage ? (
+                    <p id="status-message" className="status-message" role="status">
+                        {statusMessage}
+                    </p>
+                ) : (
+                    <p className="lock-hint">Select a word to lock it</p>
+                )}
             </div>
             <p id="insult-intro" className="insult-intro">{introText}</p>
             <div id="insult-words" className="insult-words">
