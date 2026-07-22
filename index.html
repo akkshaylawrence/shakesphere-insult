@@ -6,92 +6,9 @@
     <meta name="description" content="Generate and share Shakespearean insults for the target of your choice.">
     <meta name="theme-color" content="#f7f7f5">
     <title>Shakespearean Insult Forge</title>
-    <link rel="stylesheet" href="forge-20260721-themeicon.css">
 </head>
 <body>
-    <main class="page-shell">
-        <header class="page-header">
-            <div>
-                <h1>Shakespearean Insult Forge</h1>
-                <p class="intro">Choose a target and decide how merciless the Bard should be.</p>
-            </div>
-            <div class="header-actions">
-                <button id="theme-toggle-btn" class="icon-button" type="button" aria-label="Switch to dark mode" title="Switch to dark mode">
-                    <svg class="theme-icon moon-icon" viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>
-                    </svg>
-                    <svg class="theme-icon sun-icon" viewBox="0 0 24 24" aria-hidden="true">
-                        <circle cx="12" cy="12" r="4"></circle>
-                        <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>
-                    </svg>
-                </button>
-            </div>
-        </header>
-
-        <section class="generator" aria-label="Insult generator">
-            <div class="controls-grid">
-                <div class="field">
-                    <label for="target-name-input">Target</label>
-                    <input id="target-name-input" type="text" placeholder="Enter a name (optional)" maxlength="30" autocomplete="off">
-                </div>
-
-                <div class="field" role="group" aria-labelledby="intensity-label">
-                    <label id="intensity-label">Intensity</label>
-                    <div class="intensity-options">
-                        <button class="intensity-button active" type="button" data-level="mild" aria-pressed="true">Mild</button>
-                        <button class="intensity-button" type="button" data-level="spicy" aria-pressed="false">Savage</button>
-                        <button class="intensity-button" type="button" data-level="lethal" aria-pressed="false">Lethal</button>
-                    </div>
-                </div>
-            </div>
-
-            <article class="result-card" aria-live="polite" aria-atomic="true">
-                <div class="result-heading">
-                    <p class="result-label">Your insult</p>
-                    <p class="lock-hint">Select a word to lock it</p>
-                </div>
-                <p id="insult-intro" class="insult-intro"></p>
-                <div id="insult-words" class="insult-words">
-                    <button class="word-button" type="button" data-slot="0" aria-pressed="false"></button>
-                    <button class="word-button" type="button" data-slot="1" aria-pressed="false"></button>
-                    <button class="word-button" type="button" data-slot="2" aria-pressed="false"></button>
-                    <span aria-hidden="true">!</span>
-                </div>
-                <p id="insult-closing" class="insult-closing"></p>
-                <div id="definition-list" class="definition-list"></div>
-            </article>
-
-            <div class="actions">
-                <button id="generate-btn" class="button button-primary" type="button">Generate insult</button>
-                <button id="copy-btn" class="button button-secondary" type="button">Copy</button>
-                <button id="save-btn" class="button button-secondary" type="button">Save</button>
-                <button id="download-btn" class="button button-secondary" type="button">Download</button>
-            </div>
-
-            <button id="favorites-toggle-btn" class="saved-toggle" type="button">
-                Saved insults <span id="favorites-count">0</span>
-            </button>
-
-            <section id="favorites-panel" class="favorites-panel" aria-label="Saved insults" hidden>
-                <div class="panel-heading">
-                    <h2>Saved insults</h2>
-                    <button id="favorites-close-btn" class="text-button" type="button">Close</button>
-                </div>
-                <div id="favorites-list" class="favorites-list"></div>
-            </section>
-
-            <p id="status-message" class="status-message" role="status"></p>
-        </section>
-    </main>
-
-    <dialog id="definition-dialog" class="definition-dialog">
-        <button id="dialog-close-btn" class="dialog-close" type="button" aria-label="Close">×</button>
-        <p id="dialog-type" class="eyebrow"></p>
-        <h2 id="dialog-word"></h2>
-        <p id="dialog-definition"></p>
-    </dialog>
-
-    <canvas id="download-canvas" hidden></canvas>
-    <script src="forge-20260721-themeicon.js"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
 </body>
 </html>
