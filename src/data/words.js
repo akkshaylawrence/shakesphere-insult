@@ -4,9 +4,11 @@ export const col1Words = [
     { word: "beslubbering", def: "Slobbering over, smearing filth upon", type: "Adjective" },
     { word: "bootless", def: "Futile, useless, producing no gain", type: "Adjective" },
     { word: "churlish", def: "Surly, ill-bred, rude and boorish", type: "Adjective" },
+    { word: "clouted", def: "Wrapped in rags, clumsy, hobnailed", type: "Adjective" },
     { word: "cockered", def: "Pampered, coddled, spoiled rotten", type: "Adjective" },
     { word: "cloutish", def: "Clumsy, awkward, lumpish", type: "Adjective" },
     { word: "craven", def: "Contemptibly fainthearted, cowardly", type: "Adjective" },
+    { word: "crusty", def: "Surly, harsh-tempered, rough-surfaced", type: "Adjective" },
     { word: "dankish", def: "Disagreeably damp, moist and cold", type: "Adjective" },
     { word: "dissembling", def: "Hypocritical, deceitful, false-faced", type: "Adjective" },
     { word: "dray-officed", def: "Employed in menial, dirty cart work", type: "Adjective" },
@@ -30,11 +32,13 @@ export const col1Words = [
     { word: "peevish", def: "Fretful, obstinate, childishly irritable", type: "Adjective" },
     { word: "pernicious", def: "Highly destructive, deadly, wicked", type: "Adjective" },
     { word: "privy-grobbling", def: "Secretly groping in dark corners", type: "Adjective" },
+    { word: "puking", def: "Sickly, weak-stomached, vomiting", type: "Adjective" },
     { word: "rank", def: "Foul-smelling, offensive, corrupt", type: "Adjective" },
     { word: "reeky", def: "Foul-smelling, smoky, rancid", type: "Adjective" },
     { word: "roguish", def: "Knavish, dishonest, mischievous", type: "Adjective" },
     { word: "ruttish", def: "Lustful, sexually aggressive", type: "Adjective" },
     { word: "saucy", def: "Bold, impudent, flippant", type: "Adjective" },
+    { word: "scald", def: "Scurvy, loathsome, scabbed", type: "Adjective" },
     { word: "spleeny", def: "Irritable, spiteful, ill-humored", type: "Adjective" },
     { word: "spongy", def: "Drunken, soaking up liquor like a sponge", type: "Adjective" },
     { word: "surly", def: "Churlishly morose, bad-tempered", type: "Adjective" },
@@ -60,10 +64,13 @@ export const col2Words = [
     { word: "crook-dated", def: "Expired, past usefulness, decrepit", type: "Modifier" },
     { word: "dizzy-eyed", def: "Confused, lacking clear vision", type: "Modifier" },
     { word: "dogfox", def: "Sly, treacherous male fox", type: "Modifier" },
+    { word: "doghearted", def: "Cruel, pitiless, malicious like a wild dog", type: "Modifier" },
     { word: "dread-bolted", def: "Fearing lightnings or thunderbolts", type: "Modifier" },
     { word: "earth-vexing", def: "Troubling the peaceful earth with foolishness", type: "Modifier" },
     { word: "elf-skinned", def: "Shrivelled, thin-skinned, hollow", type: "Modifier" },
     { word: "fat-folded", def: "Encased in thick layers of sluggish fat", type: "Modifier" },
+    { word: "fat-kidneyed", def: "Gross, sluggish, corpulent", type: "Modifier" },
+    { word: "fen-sucked", def: "Drawn up from filthy, stagnant marshes", type: "Modifier" },
     { word: "flap-mouthed", def: "Having broad dangling lips, talkative", type: "Modifier" },
     { word: "fly-bitten", def: "Nibbled and ruined by flies", type: "Modifier" },
     { word: "folly-fallen", def: "Fallen into utter foolishness", type: "Modifier" },
@@ -77,8 +84,11 @@ export const col2Words = [
     { word: "ill-nurtured", def: "Badly brought up, rude, untaught", type: "Modifier" },
     { word: "knotty-pated", def: "Blockheaded, thick-skulled", type: "Modifier" },
     { word: "lumpish-headed", def: "Dull, heavy, lacking quickness", type: "Modifier" },
+    { word: "malmsey-nose", def: "Red-nosed from sweet wine drinking", type: "Modifier" },
     { word: "malt-wormy", def: "Drunken, infested with beer maggots", type: "Modifier" },
+    { word: "milk-livered", def: "Cowardly, faint-hearted, lacking courage", type: "Modifier" },
     { word: "motley-minded", def: "Foolish-minded, wearing a jester's coat mentally", type: "Modifier" },
+    { word: "onion-eyed", def: "Tearful, weeping insincerely", type: "Modifier" },
     { word: "pigeon-livered", def: "Gentle to a fault, timid, lacking gall", type: "Modifier" },
     { word: "pox-marked", def: "Scarred by disease, pitted", type: "Modifier" },
     { word: "raw-boned", def: "Gaunt, thin, bony and awkward", type: "Modifier" },
@@ -87,6 +97,7 @@ export const col2Words = [
     { word: "rump-fed", def: "Fed on offal or pampered with cheap cuts", type: "Modifier" },
     { word: "shard-borne", def: "Carried on dung-beetle wings", type: "Modifier" },
     { word: "sheep-biting", def: "Sneaky, malicious, thief-like", type: "Modifier" },
+    { word: "sodden-witted", def: "Dull-brained, foolish, soaked in stupid thoughts", type: "Modifier" },
     { word: "spur-galled", def: "Chafed by spurs, overworked, worn out", type: "Modifier" },
     { word: "swag-bellied", def: "Pendulous-bellied, sagging with grease", type: "Modifier" },
     { word: "tardy-gated", def: "Slow-moving, sluggish of gait", type: "Modifier" },
@@ -100,6 +111,7 @@ export const col3Words = [
     { word: "apple-john", def: "A withered, shriveled winter apple", type: "Noun" },
     { word: "baggage", def: "A worthless, worthless person or woman", type: "Noun" },
     { word: "barnacle", def: "A parasite, clammy shellfish adhering to ships", type: "Noun" },
+    { word: "bed-presser", def: "A lazy, slothful glutton who never leaves bed", type: "Noun" },
     { word: "bladder", def: "A hollow, swollen bag filled with wind", type: "Noun" },
     { word: "boar-pig", def: "A young uncastrated swine", type: "Noun" },
     { word: "bugbear", def: "An imaginary monster used to frighten children", type: "Noun" },
@@ -139,9 +151,12 @@ export const col3Words = [
     { word: "pignut", def: "An edible earthnut, worthless bulb", type: "Noun" },
     { word: "puttock", def: "A kite, scavenger bird of prey", type: "Noun" },
     { word: "pumpion", def: "A pumpkin; a large, fat, useless fellow", type: "Noun" },
+    { word: "rampallian", def: "A riotous, scoundrelly rascal", type: "Noun" },
     { word: "ratsbane", def: "Rat poison; a poisonous rascal", type: "Noun" },
+    { word: "scullion", def: "A low, filthy kitchen servant, drudge", type: "Noun" },
     { word: "scut", def: "A short, stubby tail of a hare", type: "Noun" },
     { word: "skainsmate", def: "A companion in knavery; cutthroat pal", type: "Noun" },
+    { word: "stock-fish", def: "A dried, lifeless fish; a stiff fool", type: "Noun" },
     { word: "strumpet", def: "A harlot, deceitful woman", type: "Noun" },
     { word: "varlet", def: "A scoundrel, rogue, menial servant", type: "Noun" },
     { word: "vassal", def: "A humble servant, dependant", type: "Noun" },
@@ -150,15 +165,15 @@ export const col3Words = [
 ];
 
 export const mildWords = new Set([
-    'artless', 'bootless', 'cockered', 'cloutish', 'fawning', 'frothy', 'gleeking', 'lumpish', 'mammering', 'mewling', 'peevish', 'saucy', 'vain', 'weedy', 'yeasty',
-    'base-court', 'bat-fowling', 'beef-witted', 'beetle-headed', 'clay-brained', 'dizzy-eyed', 'flap-mouthed', 'fool-born', 'half-faced', 'idle-headed', 'lumpish-headed', 'motley-minded', 'pigeon-livered', 'tardy-gated', 'tickle-brained',
-    'apple-john', 'barnacle', 'bladder', 'bugbear', 'clack-dish', 'clotpole', 'coxcomb', 'dewberry', 'gudgeon', 'hedge-pig', 'jolthead', 'lout', 'minnow', 'pigeon-egg', 'pignut', 'pumpion', 'wagtail'
+    'artless', 'bootless', 'cockered', 'cloutish', 'clouted', 'crusty', 'fawning', 'frothy', 'gleeking', 'lumpish', 'mammering', 'mewling', 'peevish', 'puking', 'saucy', 'vain', 'weedy', 'yeasty',
+    'base-court', 'bat-fowling', 'beef-witted', 'beetle-headed', 'clay-brained', 'dizzy-eyed', 'flap-mouthed', 'fool-born', 'half-faced', 'idle-headed', 'lumpish-headed', 'malmsey-nose', 'milk-livered', 'motley-minded', 'onion-eyed', 'pigeon-livered', 'sodden-witted', 'tardy-gated', 'tickle-brained',
+    'apple-john', 'barnacle', 'bed-presser', 'bladder', 'bugbear', 'clack-dish', 'clotpole', 'coxcomb', 'dewberry', 'gudgeon', 'hedge-pig', 'jolthead', 'lout', 'minnow', 'pigeon-egg', 'pignut', 'pumpion', 'scullion', 'stock-fish', 'wagtail'
 ]);
 
 export const lethalWords = new Set([
-    'craven', 'dissembling', 'gorbellied', 'infectious', 'mangled', 'pernicious', 'privy-grobbling', 'rank', 'reeky', 'ruttish', 'spleeny', 'venomed', 'villainous', 'warped',
-    'boil-brained', 'dread-bolted', 'earth-vexing', 'fat-folded', 'guts-griping', 'hell-hated', 'malt-wormy', 'pox-marked', 'reeky-cheeked', 'rump-fed', 'shard-borne', 'sheep-biting', 'toad-spotted',
-    'baggage', 'canker-blossom', 'death-token', 'flax-wench', 'foot-licker', 'fustilarian', 'harpy', 'horn-beast', 'lewdster', 'measle', 'miscreant', 'ratsbane', 'strumpet', 'varlet'
+    'craven', 'dissembling', 'gorbellied', 'infectious', 'mangled', 'pernicious', 'privy-grobbling', 'rank', 'reeky', 'ruttish', 'scald', 'spleeny', 'venomed', 'villainous', 'warped',
+    'boil-brained', 'doghearted', 'dread-bolted', 'earth-vexing', 'fat-folded', 'fat-kidneyed', 'fen-sucked', 'guts-griping', 'hell-hated', 'malt-wormy', 'pox-marked', 'reeky-cheeked', 'rump-fed', 'shard-borne', 'sheep-biting', 'toad-spotted',
+    'baggage', 'canker-blossom', 'death-token', 'flax-wench', 'foot-licker', 'fustilarian', 'harpy', 'horn-beast', 'lewdster', 'measle', 'miscreant', 'rampallian', 'ratsbane', 'strumpet', 'varlet'
 ]);
 
 export const intensityConfig = {
