@@ -104,13 +104,6 @@ h1 {
     line-height: 1.55;
 }
 
-.header-actions {
-    position: static;
-    flex-shrink: 0;
-    margin-top: 4px;
-}
-
-.icon-button,
 .text-button,
 .saved-toggle {
     border: 0;
@@ -119,50 +112,6 @@ h1 {
     cursor: pointer;
     font-size: 0.84rem;
     font-weight: 650;
-}
-
-.icon-button {
-    display: grid;
-    width: 42px;
-    height: 42px;
-    padding: 0;
-    place-items: center;
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    background: var(--surface);
-    transition: border-color 150ms, color 150ms, background 150ms, transform 100ms;
-}
-
-.icon-button:active {
-    transform: scale(0.97);
-}
-
-.theme-icon {
-    width: 18px;
-    height: 18px;
-    fill: none;
-    stroke: currentColor;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-width: 1.8;
-}
-
-.sun-icon {
-    display: none;
-}
-
-body.dark .moon-icon {
-    display: none;
-}
-
-body.dark .sun-icon {
-    display: block;
-}
-
-.icon-button:hover {
-    border-color: var(--accent);
-    color: var(--accent);
-    background: var(--surface-subtle);
 }
 
 .generator {

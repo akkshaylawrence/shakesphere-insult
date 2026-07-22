@@ -11,7 +11,7 @@ import { exportInsultImage } from './utils/canvasExport';
 import { col1Words, col2Words, col3Words, mildWords, lethalWords, intensityConfig } from './data/words';
 
 export function App() {
-    const { isDark, toggleTheme } = useTheme();
+    const { isDark } = useTheme();
     const [target, setTarget] = useState('');
     const [intensity, setIntensity] = useState('mild');
     const [currentWords, setCurrentWords] = useState([null, null, null]);
@@ -104,7 +104,7 @@ export function App() {
 
     return (
         <main className="page-shell">
-            <Header isDark={isDark} onToggleTheme={toggleTheme} />
+            <Header />
 
             <section className="generator" aria-label="Insult generator">
                 <Controls
