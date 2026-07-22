@@ -1,0 +1,19 @@
+{
+  "name": "shakesphere-insult",
+  "version": "1.0.0",
+  "description": "The Bard's Vituperator - Shakespearean Insult Forge & Elizabethan Roast Master",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "shakespeare",
+    "insults",
+    "generator",
+    "elizabethan",
+    "web-app"
+  ],
+  "author": "",
+  "license": "ISC"
+}
